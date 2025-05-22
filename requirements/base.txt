@@ -1,7 +1,7 @@
 # Django
 Django==4.2.21
 
-django-allauth==0.63.3
+django-allauth==65.8.1
 PyJWT==2.8.0
 cryptography==44.0.1
 
