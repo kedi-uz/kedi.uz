@@ -1,0 +1,18 @@
+{% extends "account/base_entrance.html" %}
+{% load i18n static %}
+
+{% block head_title %}
+    {% trans "Sign In with Google" %}
+{% endblock head_title %}
+
+{% block content %}
+    {% if SOCIALACCOUNT_ENABLED %}
+        <div class="mt-6">
+            {% include "socialaccount/snippets/login.html" with page_layout="entrance" %}
+        </div>
+    {% else %}
+        <p class="text-center text-red-500">
+            {% trans "Social login is not enabled. Please enable it in settings." %}
+        </p>
+    {% endif %}
+{% endblock content %}

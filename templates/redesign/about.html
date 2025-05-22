@@ -1,0 +1,57 @@
+{% extends 'redesign/base.html' %}
+
+{% block custom_css %}
+<!-- custom-css -->
+<style type="text/tailwindcss">
+    @layer utilities {
+        blockquote {
+    font-size: 1.1em;
+    width: 90%;
+    margin: 30px auto;
+    font-family: Open Sans;
+    font-style: italic;
+    color: #555555;
+    padding: 1em 10px 1em 7px;
+    border-left: 8px solid #78C0A8;
+    line-height: 1.6;
+    position: relative;
+    background: #EDEDED;
+  }
+
+
+  h1,h2,h3,h4,p {
+    opacity: 0.75;
+}
+    h1,h2{
+        font-size: 40px;
+    }
+        
+    }
+</style>
+<!-- custom-css-end -->
+{% endblock %}
+
+{% block content %}
+<main class="grid lg:grid-cols-4 max-w-screen-xl items-center mx-auto">
+    <div class="gap-10 lg:col-span-3 h-full">
+        <div class="grid grid-cols-1 gap-6 p-6">
+            <div class="bg-zinc-900 rounded-md p-3">
+                <h1 class="font-bold text-3xl ">
+                    {{about.title}}
+                </h1>
+                <div>
+                    <p class="opacity-50 mt-2">{{about.created_at}}</p>
+                </div>
+                <img src="{{about.img.url}}" class="w-full  object-cover rounded-md">
+                <div class="p-7">
+                    {{ about.content | safe }}
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- news-end -->
+
+    {% include 'redesign/top_community.html' %}
+
+</main>
+{% endblock %}

@@ -1,0 +1,35 @@
+# Django
+Django==4.2.21
+
+django-allauth==0.63.3
+PyJWT==2.8.0
+cryptography==44.0.1
+
+django-jazzmin
+
+django-location-field==2.7.3
+django-map-widgets==0.4.2
+
+django-modeltranslation==0.18.11
+
+django-tailwind==3.8.0
+django-browser-reload==1.18.0
+
+django-ninja==1.4.1
+
+pillow==11.2.1
+
+python-dotenv
+python-environ==0.4.54
+
+requests
+
+six
+# recaptcha
+django-recaptcha==4.1.0
+
+# sentry
+sentry-sdk[django]
+
+# redis
+django-redis

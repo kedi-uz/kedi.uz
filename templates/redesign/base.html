@@ -1,0 +1,49 @@
+{% load static i18n tailwind_tags %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="keywords" content="Help animals and nature">
+  <meta name="description" content="The website is about animals and nature living together">
+  <meta property="og:url" content="https://kedi.uz/">
+  <meta property="og:site_name" content="kedi.uz">
+  <meta property="og:type" content="website" />
+  <link rel="icon" type="image/x-icon" href="{% static 'favicon.ico' %}">
+  {% tailwind_css %}
+  <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
+  
+  
+  {% block meta %} {% endblock %}
+  
+  <title>kedi.uz</title>
+
+
+  {% block custom_css %} {% endblock %}
+
+  {% block link_and_scripts %} 
+
+  {% endblock %}
+
+    
+</head>
+
+<body class="bg-black text-white">
+    
+  <!-- header start -->
+  {% include "layout/header.html" %}
+  <!-- header end -->
+
+  {% block content %}
+
+  {% endblock %}
+
+  <!-- footer -->
+  {% include "layout/footer.html" %}
+  <!-- footer-end -->
+
+</body>
+  <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+  <script src="https://kit.fontawesome.com/0e35ab6147.js" crossorigin="anonymous"></script>
+</html>
