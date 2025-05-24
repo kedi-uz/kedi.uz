@@ -21,7 +21,14 @@ class PostSchema(ModelSchema):
 
     class Config:
         model = models.Post
-        model_fields = ["image", "title", "short_description", "content", "tag"]
+        model_fields = [
+            "id",
+            "image",
+            "title",
+            "short_description",
+            "content",
+            "tag",
+        ]
 
 
 class EventSchema(ModelSchema):

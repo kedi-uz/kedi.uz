@@ -21,3 +21,15 @@ def get_lost_animal_list(request):
 def get_lost_animal(request, lost_animal_id: int):
     queryset = get_object_or_404(models.LostAnimal, id=lost_animal_id)
     return queryset
+
+
+@router.get("/district/", response=List[schemas.DistrictSchema])
+def get_district_all(request):
+    queryset = models.District.objects.all()
+    return list(queryset)
+
+
+@router.get("/district/{id}", response=schemas.DistrictSchema)
+def get_district(request, id: int):
+    queryset = get_object_or_404(models.District, id=id)
+    return queryset
