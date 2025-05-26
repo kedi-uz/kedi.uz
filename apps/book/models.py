@@ -49,7 +49,7 @@ class LostAnimal(common.BaseModel):
         data = schemas.LostAnimalSchema.from_orm(self).model_dump(mode="json")
         try:
             response = requests.post(
-                "http://localhost:8080/notify-lost-animal", json=data, timeout=5
+                "http://0.0.0.0:8080/notify-lost-animal", json=data, timeout=5
             )
             print("Bot response:", response.text)
         except requests.RequestException as e:
